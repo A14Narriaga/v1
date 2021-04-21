@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;1,600;1,700&display=swap");
+@import "./mixins";
+@import "./theme";
+@import "./header";
+@import "./header-phone";
+@import "./container";
+
+@mixin app($theme, $languaje) {
+  @include setCurrentTheme($theme, $languaje);
+  background: linear-gradient($primary-color-0, $primary-color-1);
+  @include header;
+  @include container;
+}
+
+* {
+  @include reset;
+  font-family: "Raleway", sans-serif;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  @include app("light", "spanish");
+}
+.dark {
+  @include app("dark", "spanish");
+}
+body.english {
+  @include app("light", "english");
+}
+.dark.english {
+  @include app("dark", "english");
+}
+
+@media (max-width: 870px) {
+  .header-container {
+    padding: 0rem 2rem;
+  }
+  .container {
+    padding: 0 2rem 2rem 2rem;
+  }
+}
+
+@media (max-width: 700px) {
+  @include header-phone;
+}

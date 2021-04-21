@@ -1,0 +1,45 @@
+$light: (
+  secondary0: #f3f3f3,
+  secondary1: #cbcbcb,
+  secondary2: #1e1a1a,
+  border: #f3f3f3,
+  border-hover: #f3f3f3,
+);
+$dark: (
+  secondary0: #1e1a1a,
+  secondary1: #1e1a1a,
+  secondary2: #8c8c8c,
+  border: #145f88,
+  border-hover: #8c8c8c,
+);
+
+:root {
+  @each $name, $color in $light {
+    --color-light-#{$name}: #{$color};
+  }
+  @each $name, $color in $dark {
+    --color-dark-#{$name}: #{$color};
+  }
+}
+
+@function getColor($color, $theme) {
+  @return var(--color-#{$theme}-#{$color});
+}
+
+@mixin setCurrentTheme($theme, $languaje) {
+  $border-color: getColor("border", $theme) !global;
+  @if $languaje == "spanish" {
+    $primary-color-0: #145f88 !global;
+    $primary-color-1: #073956 !global;
+  } @else {
+    $primary-color-0: #148088 !global;
+    $primary-color-1: #074b56 !global;
+    @if $theme == "dark" {
+      $border-color: #148088 !global;
+    }
+  }
+  $secondary-color-0: getColor("secondary0", $theme) !global;
+  $secondary-color-1: getColor("secondary1", $theme) !global;
+  $secondary-color-2: getColor("secondary2", $theme) !global;
+  $border-hover-color: getColor("border-hover", $theme) !global;
+}
