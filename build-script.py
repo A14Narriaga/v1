@@ -12,3 +12,5 @@ htmlFile = open("build\index.html", "w")
 htmlFile.write(data)
 htmlFile.close()
 shutil.move("build\index.html", "index.html")
+
+# main.b0211446.chunk : Tiene las rutas a modificar
