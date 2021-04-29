@@ -1,5 +1,6 @@
 import pathlib
 import shutil
+import os
 
 htmlFile = open("build\index.html", "r")
 data = htmlFile.read()
@@ -13,4 +14,17 @@ htmlFile.write(data)
 htmlFile.close()
 shutil.move("build\index.html", "index.html")
 
-# main.b0211446.chunk : Tiene las rutas a modificar
+pathJs = "build\static\js"
+nameJsChunkFile = ""
+nameJsFiles = os.listdir(pathJs)
+for nameJsFile in nameJsFiles:
+    if nameJsFile.startswith("main.") and nameJsFile.endswith(".chunk.js"):
+        nameJsChunkFile = nameJsFile
+        break
+jsChunkFile = open(pathJs+'\\'+nameJsChunkFile, "r")
+data = jsChunkFile.read()
+jsChunkFile.close()
+data = data.replace('src:"./', 'src:"build/')
+jsChunkFile = open(pathJs+'\\'+nameJsChunkFile, "w")
+data = jsChunkFile.write(data)
+jsChunkFile.close()
