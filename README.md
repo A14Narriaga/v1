@@ -21,3 +21,7 @@ npx yarn start
 ```
 npx yarn build
 ```
+
+# Notes
+
+- 'window' + '.' = emojis

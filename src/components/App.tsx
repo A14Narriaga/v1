@@ -2,26 +2,27 @@ import { useState, useEffect } from "react"
 import Card from "./Card"
 import Header from "./Header"
 import "../sass/App.scss"
+import data from "../json/data.json"
 
 type themeOptions = "dark" | "light"
 const themeInitialState = (localStorage.getItem("theme") || "light") as themeOptions
-type languajeOptions = "spanish" | "english"
-const languajeInitialState = (localStorage.getItem("languaje") || "spanish") as languajeOptions
+type languageOptions = "spanish" | "english"
+const languageInitialState = (localStorage.getItem("language") || "spanish") as languageOptions
 
 
 const App = () => {
 
     const [theme, setTheme] = useState(themeInitialState)
-    const [languaje, setLanguaje] = useState(languajeInitialState)
+    const [language, setlanguage] = useState(languageInitialState)
 
     const handleThemeChange = () => {
         setTheme(theme => (theme === "dark" ? "light" : "dark"))
         document.body.classList.toggle(theme)
     }
 
-    const handleLanguajeChange = () => {
-        setLanguaje(languaje => (languaje === "spanish" ? "english" : "spanish"))
-        document.body.classList.toggle(languaje)
+    const handlelanguageChange = () => {
+        setlanguage(language => (language === "spanish" ? "english" : "spanish"))
+        document.body.classList.toggle(language)
     }
 
     useEffect(() => {
@@ -30,27 +31,29 @@ const App = () => {
     }, [theme])
 
     useEffect(() => {
-        localStorage.setItem("languaje", languaje)
-        document.body.classList.toggle(languaje)
-    }, [languaje])
+        localStorage.setItem("language", language)
+        document.body.classList.toggle(language)
+    }, [language])
 
     return (
         <>
             <Header
-                headerInfo={languaje === "spanish" ? "Estudiante de Ingeniería en Sistemas Computacionales" : "Computer Systems Engineering Student"}
-                headerBtn={languaje === "spanish" ? "Mi CV" : "Resume"}
+                headerInfo={language === "spanish" ? data.spa.HEADER_INFO : data.eng.HEADER_INFO}
+                headerBtn={language === "spanish" ? data.spa.HEADER_BTN : data.eng.HEADER_BTN}
+                themeIcon={theme === "dark" ? data.icon.SUN : data.icon.MOON}
+                languageIcon={language === "spanish" ? data.icon.SPA : data.icon.ENG}
                 handleThemeChange={handleThemeChange}
-                handleLanguajeChange={handleLanguajeChange}
+                handlelanguageChange={handlelanguageChange}
             />
             <div className="container">
                 <main>
                     <section className="cards">
-                        <Card title={languaje === "spanish" ? "Sobre mi" : "About me"} icon={"fas fa-user"} />
-                        <Card title={languaje === "spanish" ? "Formación" : "Training"} icon={"fas fa-graduation-cap"} />
-                        <Card title={languaje === "spanish" ? "Herramientas y Tecnologías" : "Tools and Technologies"} icon={"fas fa-cogs"} />
-                        <Card title={languaje === "spanish" ? "Proyectos" : "Projects"} icon={"fas fa-folder"} />
-                        <Card title={languaje === "spanish" ? "Experiencia" : "Experience"} icon={"fas fa-briefcase"} />
-                        <Card title={languaje === "spanish" ? "Información de contacto" : "Contact information"} icon={"fas fa-hand-peace"} />
+                        <Card title={language === "spanish" ? data.spa.CARD_1 : data.eng.CARD_1} icon={data.icon.CARD_1} />
+                        <Card title={language === "spanish" ? data.spa.CARD_2 : data.eng.CARD_2} icon={data.icon.CARD_2} />
+                        <Card title={language === "spanish" ? data.spa.CARD_3 : data.eng.CARD_3} icon={data.icon.CARD_3} />
+                        <Card title={language === "spanish" ? data.spa.CARD_4 : data.eng.CARD_4} icon={data.icon.CARD_4} />
+                        <Card title={language === "spanish" ? data.spa.CARD_5 : data.eng.CARD_5} icon={data.icon.CARD_5} />
+                        <Card title={language === "spanish" ? data.spa.CARD_6 : data.eng.CARD_6} icon={data.icon.CARD_6} />
                     </section>
                 </main>
             </div>

@@ -2,7 +2,6 @@
 @import "./mixins";
 @import "./theme";
 @import "./header";
-@import "./header-phone";
 @import "./container";
 
 @mixin app($theme, $languaje) {
@@ -44,5 +43,5 @@ body.english {
 }
 
 @media (max-width: 700px) {
-  @include header-phone;
+  
 }
