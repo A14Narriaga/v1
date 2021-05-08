@@ -41,35 +41,52 @@ const App = () => {
 
     return (
         <>
-            {!movileSize ? 
-            <Header
-                headerInfo={language === "spanish" ? Data.spa.HEADER_INFO : Data.eng.HEADER_INFO}
-                headerBtn={language === "spanish" ? Data.spa.HEADER_BTN : Data.eng.HEADER_BTN}
-                themeIcon={theme === "dark" ? Data.icon.MOON : Data.icon.SUN}
-                languageIcon={language === "spanish" ? Data.icon.SPA : Data.icon.ENG}
-                handleThemeChange={handleThemeChange}
-                handlelanguageChange={handlelanguageChange}
-            /> : 
-            <HeaderMovile 
-                headerInfo={language === "spanish" ? Data.spa.HEADER_INFO : Data.eng.HEADER_INFO}
-                headerBtn={language === "spanish" ? Data.spa.HEADER_BTN : Data.eng.HEADER_BTN}
-                themeIcon={theme === "dark" ? Data.icon.MOON : Data.icon.SUN}
-                languageIcon={language === "spanish" ? Data.icon.SPA : Data.icon.ENG}
-                handleThemeChange={handleThemeChange}
-                handlelanguageChange={handlelanguageChange}
-            />}
-            <div className="container">
-                <main>
-                    <section className="cards">
-                        <Card title={language === "spanish" ? Data.spa.CARD_1 : Data.eng.CARD_1} icon={Data.icon.CARD_1} />
-                        <Card title={language === "spanish" ? Data.spa.CARD_2 : Data.eng.CARD_2} icon={Data.icon.CARD_2} />
-                        <Card title={language === "spanish" ? Data.spa.CARD_3 : Data.eng.CARD_3} icon={Data.icon.CARD_3} />
-                        <Card title={language === "spanish" ? Data.spa.CARD_4 : Data.eng.CARD_4} icon={Data.icon.CARD_4} />
-                        <Card title={language === "spanish" ? Data.spa.CARD_5 : Data.eng.CARD_5} icon={Data.icon.CARD_5} />
-                        <Card title={language === "spanish" ? Data.spa.CARD_6 : Data.eng.CARD_6} icon={Data.icon.CARD_6} />
-                    </section>
-                </main>
-            </div>
+            {!movileSize ?
+                <>
+                    <Header
+                        headerInfo={language === "spanish" ? Data.spa.HEADER_INFO : Data.eng.HEADER_INFO}
+                        headerBtn={language === "spanish" ? Data.spa.HEADER_BTN : Data.eng.HEADER_BTN}
+                        themeIcon={theme === "dark" ? Data.icon.MOON : Data.icon.SUN}
+                        languageIcon={language === "spanish" ? Data.icon.SPA : Data.icon.ENG}
+                        handleThemeChange={handleThemeChange}
+                        handlelanguageChange={handlelanguageChange} />
+                    <div className="container">
+                        <main>
+                            <section className="cards">
+                                <Card title={language === "spanish" ? Data.spa.CARD_1 : Data.eng.CARD_1} icon={Data.icon.CARD_1} />
+                                <Card title={language === "spanish" ? Data.spa.CARD_2 : Data.eng.CARD_2} icon={Data.icon.CARD_2} />
+                                <Card title={language === "spanish" ? Data.spa.CARD_3 : Data.eng.CARD_3} icon={Data.icon.CARD_3} />
+                                <Card title={language === "spanish" ? Data.spa.CARD_4 : Data.eng.CARD_4} icon={Data.icon.CARD_4} />
+                                <Card title={language === "spanish" ? Data.spa.CARD_5 : Data.eng.CARD_5} icon={Data.icon.CARD_5} />
+                                <Card title={language === "spanish" ? Data.spa.CARD_6 : Data.eng.CARD_6} icon={Data.icon.CARD_6} />
+                            </section>
+                        </main>
+                    </div>
+                </>
+                :
+                <>
+                    <HeaderMovile
+                        headerInfo={language === "spanish" ? Data.spa.HEADER_INFO : Data.eng.HEADER_INFO}
+                        headerBtn={language === "spanish" ? Data.spa.HEADER_BTN : Data.eng.HEADER_BTN}
+                        themeIcon={theme === "dark" ? Data.icon.MOON : Data.icon.SUN}
+                        languageIcon={language === "spanish" ? Data.icon.SPA : Data.icon.ENG}
+                        handleThemeChange={handleThemeChange}
+                        handlelanguageChange={handlelanguageChange}
+                    />
+                    <div className="container-mobile">
+                        <main>
+                            <section className="cards-mobile">
+                                <Card title={language === "spanish" ? Data.spa.CARD_1 : Data.eng.CARD_1} icon={Data.icon.CARD_1} />
+                                <Card title={language === "spanish" ? Data.spa.CARD_2 : Data.eng.CARD_2} icon={Data.icon.CARD_2} />
+                                <Card title={language === "spanish" ? Data.spa.CARD_3 : Data.eng.CARD_3} icon={Data.icon.CARD_3} />
+                                <Card title={language === "spanish" ? Data.spa.CARD_4 : Data.eng.CARD_4} icon={Data.icon.CARD_4} />
+                                <Card title={language === "spanish" ? Data.spa.CARD_5 : Data.eng.CARD_5} icon={Data.icon.CARD_5} />
+                                <Card title={language === "spanish" ? Data.spa.CARD_6 : Data.eng.CARD_6} icon={Data.icon.CARD_6} />
+                            </section>
+                        </main>
+                    </div>
+                </>
+            }
             <Modal />
         </>
     )

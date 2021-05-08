@@ -4,14 +4,19 @@
 @import "./header";
 @import "./headerMovile";
 @import "./container";
+@import "./containerMobile";
 @import "./modal";
 
 @mixin app($theme, $languaje) {
   @include setCurrentTheme($theme, $languaje);
   background: linear-gradient($primary-color-0, $primary-color-1);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100%;
   @include header;
   @include headerMovile;
   @include container;
+  @include containerMobile;
   @include modal;
 }
 
