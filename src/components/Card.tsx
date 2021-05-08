@@ -1,6 +1,8 @@
-const Card = ({title, icon}: {title: string, icon: string}) => {
+const Card = ({title, icon, typeClass}: 
+    {title: string, icon: string, typeClass: string }
+) => {
     return (
-        <section className="card">
+        <section className={"card"+typeClass}>
             <a href="/">
                 <p>{title}</p>
                 <i className={icon}></i>

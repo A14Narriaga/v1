@@ -7,14 +7,13 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 2rem;
-        .card {
+        .card-mobile {
           background: $secondary-color-0;
           border-radius: 1rem;
+          box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.253);
           display: flex;
           justify-content: center;
           align-items: center;
-          height: 11rem;
-          box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.253);
           a {
             width: 100%;
             text-align: center;
@@ -24,13 +23,34 @@
               font-weight: 700;
               font-style: italic;
               font-size: 1.2rem;
-              margin-bottom: 1.5rem;
             }
             i {
-              font-size: 3.8rem;
+              font-size: 3rem;
             }
             &:hover {
               color: $secondary-color-2;
+            }
+          }
+        }
+        .lg {
+          grid-column-start: span 2;
+          height: 8rem;
+          a {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+          }
+          p {
+            width: 50%;
+            text-align: center;
+          }
+        }
+        .sm {
+          height: 9.5rem;
+          a {
+            text-align: center;
+            p {
+              margin-bottom: 0.8rem;
             }
           }
         }

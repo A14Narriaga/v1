@@ -53,12 +53,12 @@ const App = () => {
                     <div className="container">
                         <main>
                             <section className="cards">
-                                <Card title={language === "spanish" ? Data.spa.CARD_1 : Data.eng.CARD_1} icon={Data.icon.CARD_1} />
-                                <Card title={language === "spanish" ? Data.spa.CARD_2 : Data.eng.CARD_2} icon={Data.icon.CARD_2} />
-                                <Card title={language === "spanish" ? Data.spa.CARD_3 : Data.eng.CARD_3} icon={Data.icon.CARD_3} />
-                                <Card title={language === "spanish" ? Data.spa.CARD_4 : Data.eng.CARD_4} icon={Data.icon.CARD_4} />
-                                <Card title={language === "spanish" ? Data.spa.CARD_5 : Data.eng.CARD_5} icon={Data.icon.CARD_5} />
-                                <Card title={language === "spanish" ? Data.spa.CARD_6 : Data.eng.CARD_6} icon={Data.icon.CARD_6} />
+                                <Card typeClass="" title={language === "spanish" ? Data.spa.CARD_1 : Data.eng.CARD_1} icon={Data.icon.CARD_1} />
+                                <Card typeClass="" title={language === "spanish" ? Data.spa.CARD_2 : Data.eng.CARD_2} icon={Data.icon.CARD_2} />
+                                <Card typeClass="" title={language === "spanish" ? Data.spa.CARD_3 : Data.eng.CARD_3} icon={Data.icon.CARD_3} />
+                                <Card typeClass="" title={language === "spanish" ? Data.spa.CARD_4 : Data.eng.CARD_4} icon={Data.icon.CARD_4} />
+                                <Card typeClass="" title={language === "spanish" ? Data.spa.CARD_5 : Data.eng.CARD_5} icon={Data.icon.CARD_5} />
+                                <Card typeClass="" title={language === "spanish" ? Data.spa.CARD_6 : Data.eng.CARD_6} icon={Data.icon.CARD_6} />
                             </section>
                         </main>
                     </div>
@@ -76,12 +76,12 @@ const App = () => {
                     <div className="container-mobile">
                         <main>
                             <section className="cards-mobile">
-                                <Card title={language === "spanish" ? Data.spa.CARD_1 : Data.eng.CARD_1} icon={Data.icon.CARD_1} />
-                                <Card title={language === "spanish" ? Data.spa.CARD_2 : Data.eng.CARD_2} icon={Data.icon.CARD_2} />
-                                <Card title={language === "spanish" ? Data.spa.CARD_3 : Data.eng.CARD_3} icon={Data.icon.CARD_3} />
-                                <Card title={language === "spanish" ? Data.spa.CARD_4 : Data.eng.CARD_4} icon={Data.icon.CARD_4} />
-                                <Card title={language === "spanish" ? Data.spa.CARD_5 : Data.eng.CARD_5} icon={Data.icon.CARD_5} />
-                                <Card title={language === "spanish" ? Data.spa.CARD_6 : Data.eng.CARD_6} icon={Data.icon.CARD_6} />
+                                <Card typeClass="-mobile sm" title={language === "spanish" ? Data.spa.CARD_1 : Data.eng.CARD_1} icon={Data.icon.CARD_1} />
+                                <Card typeClass="-mobile sm" title={language === "spanish" ? Data.spa.CARD_2 : Data.eng.CARD_2} icon={Data.icon.CARD_2} />
+                                <Card typeClass="-mobile lg" title={language === "spanish" ? Data.spa.CARD_3 : Data.eng.CARD_3} icon={Data.icon.CARD_3} />
+                                <Card typeClass="-mobile sm" title={language === "spanish" ? Data.spa.CARD_4 : Data.eng.CARD_4} icon={Data.icon.CARD_4} />
+                                <Card typeClass="-mobile sm" title={language === "spanish" ? Data.spa.CARD_5 : Data.eng.CARD_5} icon={Data.icon.CARD_5} />
+                                <Card typeClass="-mobile lg" title={language === "spanish" ? Data.spa.CARD_6 : Data.eng.CARD_6} icon={Data.icon.CARD_6} />
                             </section>
                         </main>
                     </div>
