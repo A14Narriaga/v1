@@ -1,19 +1,23 @@
 import { useState, useEffect } from "react"
+import { useMediaPredicate } from "react-media-hook"
 import Card from "./Card"
 import Header from "./Header"
+import HeaderMovile from "./HeaderMovile"
+import Modal from "./Modal"
+import Data from "../json/data.json"
 import "../sass/App.scss"
-import data from "../json/data.json"
+
 
 type themeOptions = "dark" | "light"
 const themeInitialState = (localStorage.getItem("theme") || "light") as themeOptions
 type languageOptions = "spanish" | "english"
 const languageInitialState = (localStorage.getItem("language") || "spanish") as languageOptions
 
-
 const App = () => {
 
     const [theme, setTheme] = useState(themeInitialState)
     const [language, setlanguage] = useState(languageInitialState)
+    const movileSize = useMediaPredicate("(max-width: 699px)");
 
     const handleThemeChange = () => {
         setTheme(theme => (theme === "dark" ? "light" : "dark"))
@@ -37,26 +41,36 @@ const App = () => {
 
     return (
         <>
+            {!movileSize ? 
             <Header
-                headerInfo={language === "spanish" ? data.spa.HEADER_INFO : data.eng.HEADER_INFO}
-                headerBtn={language === "spanish" ? data.spa.HEADER_BTN : data.eng.HEADER_BTN}
-                themeIcon={theme === "dark" ? data.icon.SUN : data.icon.MOON}
-                languageIcon={language === "spanish" ? data.icon.SPA : data.icon.ENG}
+                headerInfo={language === "spanish" ? Data.spa.HEADER_INFO : Data.eng.HEADER_INFO}
+                headerBtn={language === "spanish" ? Data.spa.HEADER_BTN : Data.eng.HEADER_BTN}
+                themeIcon={theme === "dark" ? Data.icon.MOON : Data.icon.SUN}
+                languageIcon={language === "spanish" ? Data.icon.SPA : Data.icon.ENG}
                 handleThemeChange={handleThemeChange}
                 handlelanguageChange={handlelanguageChange}
-            />
+            /> : 
+            <HeaderMovile 
+                headerInfo={language === "spanish" ? Data.spa.HEADER_INFO : Data.eng.HEADER_INFO}
+                headerBtn={language === "spanish" ? Data.spa.HEADER_BTN : Data.eng.HEADER_BTN}
+                themeIcon={theme === "dark" ? Data.icon.MOON : Data.icon.SUN}
+                languageIcon={language === "spanish" ? Data.icon.SPA : Data.icon.ENG}
+                handleThemeChange={handleThemeChange}
+                handlelanguageChange={handlelanguageChange}
+            />}
             <div className="container">
                 <main>
                     <section className="cards">
-                        <Card title={language === "spanish" ? data.spa.CARD_1 : data.eng.CARD_1} icon={data.icon.CARD_1} />
-                        <Card title={language === "spanish" ? data.spa.CARD_2 : data.eng.CARD_2} icon={data.icon.CARD_2} />
-                        <Card title={language === "spanish" ? data.spa.CARD_3 : data.eng.CARD_3} icon={data.icon.CARD_3} />
-                        <Card title={language === "spanish" ? data.spa.CARD_4 : data.eng.CARD_4} icon={data.icon.CARD_4} />
-                        <Card title={language === "spanish" ? data.spa.CARD_5 : data.eng.CARD_5} icon={data.icon.CARD_5} />
-                        <Card title={language === "spanish" ? data.spa.CARD_6 : data.eng.CARD_6} icon={data.icon.CARD_6} />
+                        <Card title={language === "spanish" ? Data.spa.CARD_1 : Data.eng.CARD_1} icon={Data.icon.CARD_1} />
+                        <Card title={language === "spanish" ? Data.spa.CARD_2 : Data.eng.CARD_2} icon={Data.icon.CARD_2} />
+                        <Card title={language === "spanish" ? Data.spa.CARD_3 : Data.eng.CARD_3} icon={Data.icon.CARD_3} />
+                        <Card title={language === "spanish" ? Data.spa.CARD_4 : Data.eng.CARD_4} icon={Data.icon.CARD_4} />
+                        <Card title={language === "spanish" ? Data.spa.CARD_5 : Data.eng.CARD_5} icon={Data.icon.CARD_5} />
+                        <Card title={language === "spanish" ? Data.spa.CARD_6 : Data.eng.CARD_6} icon={Data.icon.CARD_6} />
                     </section>
                 </main>
             </div>
+            <Modal />
         </>
     )
 }

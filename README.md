@@ -13,6 +13,10 @@ npx create-react-app . --template typescript
 ```
 npx yarn add node-sass
 ```
+- [Add Media Hook](https://github.com/lessmess-dev/react-media-hook)
+```
+npx yarn add react-media-hook
+```
 - Start proyect
 ```
 npx yarn start
