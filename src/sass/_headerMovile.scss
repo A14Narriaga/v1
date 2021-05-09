@@ -6,7 +6,7 @@
     .back {
       background-color: $secondary-color-1;
       width: 100%;
-      height: 11rem;
+      height: 12rem;
       position: absolute;
       box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.26);
       top: 0;
@@ -59,10 +59,10 @@
         font-size: 1.1rem;
         font-weight: 600;
         font-style: italic;
-        color: $secondary-color-1;
+        color: rgb(189, 172, 172);
         margin-bottom: 2rem;
         text-align: center;
-        padding: 0rem 3rem;
+        padding: 0rem 1rem;
       }
       .resume {
         margin-bottom: 2rem;
