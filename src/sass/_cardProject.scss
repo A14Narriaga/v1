@@ -37,8 +37,17 @@
       }
     }
     .card-proj-desc {
-      font-size: 0.8rem;
+      font-size: 0.85rem;
       line-height: 1rem;
+      margin-bottom: 1rem;
+    }
+    .card-proj-tools {
+      display: flex;
+      justify-content: space-around;
+      font-size: 1.5rem;
+      background-color: $tools-color;
+      padding: 0.5rem;
+      border-radius: 1rem;
     }
   }
 }

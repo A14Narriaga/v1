@@ -13,29 +13,33 @@
                 "title": "Sistema de posgrado",
                 "link": "",
                 "git": "",
-                "img": "projectposgrado.png",
-                "desc": "Proyecto realizado para mi titulacion el cual consiste en gestionar la informacion de posgrado por medio de tres roles para la Escuela Superior de Computo del IPN."
+                "img": "projectPosgrado.png",
+                "desc": "Proyecto realizado para mi titulacion el cual consiste en gestionar la informacion de posgrado por medio de tres roles para la Escuela Superior de Computo del IPN.",
+                "tools": "fab fa-html5,fab fa-css3-alt,fab fa-php,fab fa-js-square"
             },
             "2": {
                 "title": "Clon de Spotify",
                 "link": "https://a14narriaga-spotify.netlify.app/",
                 "git": "https://github.com/A14Narriaga/spotify-clone",
                 "img": "",
-                "desc": "Un proyecto mas grande que ayudo a perfeccionar mis habilidades en React asi como la implementacion de rutas. "
+                "desc": "Un proyecto mas grande que ayudo a perfeccionar mis habilidades en React asi como la implementacion de rutas. ",
+                "tools": "fab fa-html5,fab fa-react,fab fa-sass,fab fa-js-square"
             },
             "3": {
                 "title": "Lista de tareas",
                 "link": "https://a14narriaga.github.io/to-do/",
                 "git": "https://github.com/A14Narriaga/to-do",
                 "img": "projectToDo.png",
-                "desc": "Interesante aplicacion que desarrolle para gestionar un CRUD de tareas, a manera de practica implementando useState and useEffect de React"
+                "desc": "Interesante aplicacion que desarrolle para gestionar un CRUD de tareas, a manera de practica implementando useState and useEffect de React",
+                "tools": "fab fa-html5,fab fa-react,fab fa-sass,fab fa-js-square"
             },
             "4": {
                 "title": "Página de Breaking Bad",
                 "link": "https://a14narriaga.github.io/api/",
                 "git": "https://github.com/A14Narriaga/api",
                 "img": "projectApi.png",
-                "desc": "Una simple aplicacion con el fin de consultar una API, en este caso de breacking bad, implementando un tema oscuro y el almacenamiento de datos."
+                "desc": "Una simple aplicacion con el fin de consultar una API, en este caso de breacking bad, implementando un tema oscuro y el almacenamiento de datos.",
+                "tools": "fab fa-html5,fab fa-react,fab fa-sass,fab fa-js-square"
             }
         }
     },
@@ -79,6 +83,21 @@
         "SPA": "fas fa-globe-americas",
         "ENG": "fas fa-globe-europe",
         "LINK": "fas fa-link",
-        "GITHUB": "fab fa-github"
+        "REACT": "fab fa-react",
+        "PHP": "fab fa-php",
+        "SASS": "fab fa-sass",
+        "HTML": "fab fa-html5",
+        "CSS": "fab fa-css3-alt",
+        "JS": "fab fa-js-square",
+        "TS": "",
+        "XD": "",
+        "BOOTSTRAP": "fab fa-bootstrap",
+        "TELEGRAM": "fab fa-telegram-plane",
+        "WHATS": "fab fa-whatsapp",
+        "MAIL": "fas fa-envelope",
+        "GITHUB": "fab fa-github",
+        "TW": "fab fa-twitter",
+        "IN": "fab fa-linkedin"
+
     }
 }

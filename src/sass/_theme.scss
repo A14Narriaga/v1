@@ -5,6 +5,7 @@ $light: (
   border: #f3f3f3,
   border-hover: #f3f3f3,
   modal: #ffffff70,
+  tools: #9e989836,
 );
 $dark: (
   secondary0: #1e1a1a,
@@ -13,6 +14,7 @@ $dark: (
   border: #145f88,
   border-hover: #8c8c8c,
   modal: #0f0e0ea2,
+  tools: #ffffff36,
 );
 
 :root {
@@ -45,4 +47,5 @@ $dark: (
   $secondary-color-2: getColor("secondary2", $theme) !global;
   $border-hover-color: getColor("border-hover", $theme) !global;
   $modal-color: getColor("modal", $theme) !global;
+  $tools-color: getColor("tools", $theme) !global;
 }

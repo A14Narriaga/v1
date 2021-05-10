@@ -27,6 +27,7 @@ const Modal = ({ showModal, handleShowModal, language, cardSelected }:
                 git={Data.spa.projects[1].git}
                 img={Data.spa.projects[1].img}
                 desc={language === "spanish" ? Data.spa.projects[1].desc : Data.eng.projects[1].desc}
+                tools={Data.spa.projects[1].tools}
             />
             {/* <CardProject 
                 title = {language === "spanish" ? Data.spa.projects[2].title : Data.eng.projects[2].title}
@@ -34,6 +35,7 @@ const Modal = ({ showModal, handleShowModal, language, cardSelected }:
                 git={Data.spa.projects[2].git}
                 img={Data.spa.projects[2].img}
                 desc={language === "spanish" ? Data.spa.projects[2].desc : Data.eng.projects[2].desc}
+                tools={Data.spa.projects[2].tools}
             /> */}
             <CardProject 
                 title = {language === "spanish" ? Data.spa.projects[3].title : Data.eng.projects[3].title}
@@ -41,6 +43,7 @@ const Modal = ({ showModal, handleShowModal, language, cardSelected }:
                 git={Data.spa.projects[3].git}
                 img={Data.spa.projects[3].img}
                 desc={language === "spanish" ? Data.spa.projects[3].desc : Data.eng.projects[3].desc}
+                tools={Data.spa.projects[3].tools}
             />
             <CardProject 
                 title = {language === "spanish" ? Data.spa.projects[4].title : Data.eng.projects[4].title}
@@ -48,6 +51,7 @@ const Modal = ({ showModal, handleShowModal, language, cardSelected }:
                 git={Data.spa.projects[4].git}
                 img={Data.spa.projects[4].img}
                 desc={language === "spanish" ? Data.spa.projects[4].desc : Data.eng.projects[4].desc}
+                tools={Data.spa.projects[4].tools}
             />
         </>
         break;
