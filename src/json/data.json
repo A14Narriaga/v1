@@ -9,9 +9,34 @@
         "CARD_5": "Experiencia",
         "CARD_6": "Información de contacto",
         "projects": {
-            "title": "hola",
-            "img": "https://picsum.photos/seed/picsum/300/200",
-            "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum sunt asperiores reiciendis consectetur, doloribus, vel dignissimos dolores officiis placeat debitis hic eum doloremque saepe repellat nemo necessitatibus."
+            "1": {
+                "title": "Sistema de posgrado",
+                "link": "",
+                "git": "",
+                "img": "",
+                "desc": ""
+            },
+            "2": {
+                "title": "Clon de Spotify",
+                "link": "a14narriaga-spotify.netlify.app/",
+                "git": "https://github.com/A14Narriaga/spotify-clone",
+                "img": "",
+                "desc": ""
+            },
+            "3": {
+                "title": "Lista de tareas",
+                "link": "a14narriaga.github.io/to-do/",
+                "git": "https://github.com/A14Narriaga/to-do",
+                "img": "",
+                "desc": ""
+            },
+            "4": {
+                "title": "Página de Breaking Bad",
+                "link": "a14narriaga.github.io/api/",
+                "git": "https://github.com/A14Narriaga/api",
+                "img": "projectApi.png",
+                "desc": ""
+            }
         }
     },
     "eng": {
@@ -22,7 +47,25 @@
         "CARD_3": "Tools and Technologies",
         "CARD_4": "Projects",
         "CARD_5": "Experience",
-        "CARD_6": "Contact information"
+        "CARD_6": "Contact information",
+        "projects": {
+            "1": {
+                "title": "Postgraduate system",
+                "desc": ""
+            },
+            "2": {
+                "title": "Spotify Clone",
+                "desc": ""
+            },
+            "3": {
+                "title": "To-Do List",
+                "desc": ""
+            },
+            "4": {
+                "title": "Breaking Bad Page",
+                "desc": ""
+            }
+        }
     },
     "icon": {
         "CARD_1": "fas fa-user",
@@ -34,6 +77,8 @@
         "SUN": "fas fa-cloud-sun",
         "MOON": "fas fa-cloud-moon",
         "SPA": "fas fa-globe-americas",
-        "ENG": "fas fa-globe-europe"
+        "ENG": "fas fa-globe-europe",
+        "LINK": "fas fa-link",
+        "GITHUB": "fab fa-github"
     }
 }

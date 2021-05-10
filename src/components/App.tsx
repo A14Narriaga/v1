@@ -33,7 +33,7 @@ const App = () => {
 
     const handleShowModal = (card: number) => {
         setCardSelected(card)
-        if(movileSize) document.body.style.position = showModal === "hidde" ? "fixed" : "";
+        //if(movileSize) document.body.style.position = showModal === "hidde" ? "fixed" : "";
         setShowModal(modal => (modal === "hidde" ? "" : "hidde"));
     }
 
