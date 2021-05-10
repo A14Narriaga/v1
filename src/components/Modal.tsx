@@ -28,13 +28,13 @@ const Modal = ({ showModal, handleShowModal, language, cardSelected }:
                 img={Data.spa.projects[1].img}
                 desc={language === "spanish" ? Data.spa.projects[1].desc : Data.eng.projects[1].desc}
             />
-            <CardProject 
+            {/* <CardProject 
                 title = {language === "spanish" ? Data.spa.projects[2].title : Data.eng.projects[2].title}
                 link = {Data.spa.projects[2].link}
                 git={Data.spa.projects[2].git}
                 img={Data.spa.projects[2].img}
                 desc={language === "spanish" ? Data.spa.projects[2].desc : Data.eng.projects[2].desc}
-            />
+            /> */}
             <CardProject 
                 title = {language === "spanish" ? Data.spa.projects[3].title : Data.eng.projects[3].title}
                 link = {Data.spa.projects[3].link}

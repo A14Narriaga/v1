@@ -23,7 +23,7 @@ const CardProject = ({ title, link, git, img, desc }:
                 <img src={`./img/${img}`} alt={title} />
             </div>
             <div className="card-proj-desc">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum sunt asperiores reiciendis consectetur, doloribus, vel dignissimos dolores officiis placeat debitis hic eum doloremque saepe repellat nemo necessitatibus voluptas error autem.
+                {desc}
             </div>
         </section>
     )

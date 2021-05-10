@@ -42,11 +42,12 @@
     .container-modal {
       //background-color: rgba(102, 51, 153, 0.432);
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 1.5rem;
       overflow-y: scroll;
       height: 79%;
       font-weight: bold;
+      padding: 0rem 1rem;
     }
     .line-modal {
       padding-bottom: 2rem;

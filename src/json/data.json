@@ -13,29 +13,29 @@
                 "title": "Sistema de posgrado",
                 "link": "",
                 "git": "",
-                "img": "",
-                "desc": ""
+                "img": "projectposgrado.png",
+                "desc": "Proyecto realizado para mi titulacion el cual consiste en gestionar la informacion de posgrado por medio de tres roles para la Escuela Superior de Computo del IPN."
             },
             "2": {
                 "title": "Clon de Spotify",
-                "link": "a14narriaga-spotify.netlify.app/",
+                "link": "https://a14narriaga-spotify.netlify.app/",
                 "git": "https://github.com/A14Narriaga/spotify-clone",
                 "img": "",
-                "desc": ""
+                "desc": "Un proyecto mas grande que ayudo a perfeccionar mis habilidades en React asi como la implementacion de rutas. "
             },
             "3": {
                 "title": "Lista de tareas",
-                "link": "a14narriaga.github.io/to-do/",
+                "link": "https://a14narriaga.github.io/to-do/",
                 "git": "https://github.com/A14Narriaga/to-do",
-                "img": "",
-                "desc": ""
+                "img": "projectToDo.png",
+                "desc": "Interesante aplicacion que desarrolle para gestionar un CRUD de tareas, a manera de practica implementando useState and useEffect de React"
             },
             "4": {
                 "title": "Página de Breaking Bad",
-                "link": "a14narriaga.github.io/api/",
+                "link": "https://a14narriaga.github.io/api/",
                 "git": "https://github.com/A14Narriaga/api",
                 "img": "projectApi.png",
-                "desc": ""
+                "desc": "Una simple aplicacion con el fin de consultar una API, en este caso de breacking bad, implementando un tema oscuro y el almacenamiento de datos."
             }
         }
     },
@@ -51,19 +51,19 @@
         "projects": {
             "1": {
                 "title": "Postgraduate system",
-                "desc": ""
+                "desc": "Project carried out for my degree which consists of managing postgraduate information through three roles for the Higher School of Computing of the IPN."
             },
             "2": {
                 "title": "Spotify Clone",
-                "desc": ""
+                "desc": "A bigger project that helped hone my React skills as well as route implementation."
             },
             "3": {
                 "title": "To-Do List",
-                "desc": ""
+                "desc": "Interesting application that I developed to manage a CRUD of tasks, as a practice implementing useState and useEffect of React"
             },
             "4": {
                 "title": "Breaking Bad Page",
-                "desc": ""
+                "desc": "A simple application in order to query an API, in this case breacking bad, implementing a dark theme and data storage."
             }
         }
     },
