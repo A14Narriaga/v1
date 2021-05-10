@@ -15,7 +15,7 @@
                 "git": "",
                 "img": "projectPosgrado.png",
                 "desc": "Proyecto realizado para mi titulacion el cual consiste en gestionar la informacion de posgrado por medio de tres roles para la Escuela Superior de Computo del IPN.",
-                "tools": "fab fa-html5,fab fa-css3-alt,fab fa-php,fab fa-js-square"
+                "tools": "fab fa-html5,fab fa-bootstrap,fab fa-php,fab fa-js-square"
             },
             "2": {
                 "title": "Clon de Spotify",
