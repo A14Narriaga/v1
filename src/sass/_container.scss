@@ -15,12 +15,11 @@
           height: 13rem;
           box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.253);
       
-          a {
+          .card-content {
             width: 100%;
             text-align: center;
             color: $primary-color-0;
             padding: 2.5rem;
-            text-decoration: none;
       
             p {
               font-weight: 700;

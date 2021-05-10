@@ -1,3 +1,38 @@
 @mixin cardProject {
-    
+  .card-proj {
+    background-color: rgba(255, 255, 255, 0.699);
+    color: black;
+    box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.26);
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    .card-proj-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid rgb(177, 177, 177);
+      p {
+        font-weight: bold;
+      }
+      .card-proj-actions {
+        i {
+          font-size: 1.5rem;
+          margin-left: 1rem;
+        }
+      }
+    }
+    .card-proj-img {
+      padding: 1rem;
+      border-bottom: 1px solid rgb(177, 177, 177);
+      text-align: center;
+      margin-bottom: 0.5rem;
+      img {
+        width: 100%;
+      }
+    }
+    .card-proj-desc {
+      font-size: 0.7rem;
+      line-height: 1rem;
+    }
+  }
 }

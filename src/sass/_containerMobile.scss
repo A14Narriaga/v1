@@ -14,11 +14,10 @@
           display: flex;
           justify-content: center;
           align-items: center;
-          a {
+          .card-content {
             width: 100%;
             text-align: center;
             color: $primary-color-0;
-            text-decoration: none;
             p {
               font-weight: 700;
               font-style: italic;
@@ -35,7 +34,7 @@
         .lg {
           grid-column-start: span 2;
           height: 8rem;
-          a {
+          .card-content {
             display: flex;
             justify-content: space-around;
             align-items: center;
@@ -47,7 +46,7 @@
         }
         .sm {
           height: 9.5rem;
-          a {
+          .card-content {
             text-align: center;
             p {
               margin-bottom: 0.8rem;

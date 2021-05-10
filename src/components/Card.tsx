@@ -1,12 +1,12 @@
-const Card = ({title, icon, typeClass}: 
-    {title: string, icon: string, typeClass: string }
+const Card = ({id, handleShowModal, title, icon, typeClass}: 
+    {id: number ,handleShowModal: any, title: string, icon: string, typeClass: string }
 ) => {
     return (
-        <section className={"card"+typeClass}>
-            <a href="/">
+        <section onClick={() => handleShowModal(id)} className={`card${typeClass}`}>
+            <div className="card-content">
                 <p>{title}</p>
                 <i className={icon}></i>
-            </a>
+            </div>
         </section>
     )
 }

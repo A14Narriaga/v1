@@ -15,9 +15,11 @@ const languageInitialState = (localStorage.getItem("language") || "spanish") as 
 
 const App = () => {
 
+    const movileSize = useMediaPredicate("(max-width: 699px)");
     const [theme, setTheme] = useState(themeInitialState)
     const [language, setlanguage] = useState(languageInitialState)
-    const movileSize = useMediaPredicate("(max-width: 699px)");
+    const [showModal, setShowModal] = useState("hidde")
+    const [cardSelected, setCardSelected] = useState(1)
 
     const handleThemeChange = () => {
         setTheme(theme => (theme === "dark" ? "light" : "dark"))
@@ -27,6 +29,12 @@ const App = () => {
     const handlelanguageChange = () => {
         setlanguage(language => (language === "spanish" ? "english" : "spanish"))
         document.body.classList.toggle(language)
+    }
+
+    const handleShowModal = (card: number) => {
+        setCardSelected(card)
+        if(movileSize) document.body.style.position = showModal === "hidde" ? "fixed" : "";
+        setShowModal(modal => (modal === "hidde" ? "" : "hidde"));
     }
 
     useEffect(() => {
@@ -53,12 +61,12 @@ const App = () => {
                     <div className="container">
                         <main>
                             <section className="cards">
-                                <Card typeClass="" title={language === "spanish" ? Data.spa.CARD_1 : Data.eng.CARD_1} icon={Data.icon.CARD_1} />
-                                <Card typeClass="" title={language === "spanish" ? Data.spa.CARD_2 : Data.eng.CARD_2} icon={Data.icon.CARD_2} />
-                                <Card typeClass="" title={language === "spanish" ? Data.spa.CARD_3 : Data.eng.CARD_3} icon={Data.icon.CARD_3} />
-                                <Card typeClass="" title={language === "spanish" ? Data.spa.CARD_4 : Data.eng.CARD_4} icon={Data.icon.CARD_4} />
-                                <Card typeClass="" title={language === "spanish" ? Data.spa.CARD_5 : Data.eng.CARD_5} icon={Data.icon.CARD_5} />
-                                <Card typeClass="" title={language === "spanish" ? Data.spa.CARD_6 : Data.eng.CARD_6} icon={Data.icon.CARD_6} />
+                                <Card id={1} handleShowModal={handleShowModal} typeClass="" title={language === "spanish" ? Data.spa.CARD_1 : Data.eng.CARD_1} icon={Data.icon.CARD_1} />
+                                <Card id={2} handleShowModal={handleShowModal} typeClass="" title={language === "spanish" ? Data.spa.CARD_2 : Data.eng.CARD_2} icon={Data.icon.CARD_2} />
+                                <Card id={3} handleShowModal={handleShowModal} typeClass="" title={language === "spanish" ? Data.spa.CARD_3 : Data.eng.CARD_3} icon={Data.icon.CARD_3} />
+                                <Card id={4} handleShowModal={handleShowModal} typeClass="" title={language === "spanish" ? Data.spa.CARD_4 : Data.eng.CARD_4} icon={Data.icon.CARD_4} />
+                                <Card id={5} handleShowModal={handleShowModal} typeClass="" title={language === "spanish" ? Data.spa.CARD_5 : Data.eng.CARD_5} icon={Data.icon.CARD_5} />
+                                <Card id={6} handleShowModal={handleShowModal} typeClass="" title={language === "spanish" ? Data.spa.CARD_6 : Data.eng.CARD_6} icon={Data.icon.CARD_6} />
                             </section>
                         </main>
                     </div>
@@ -76,18 +84,23 @@ const App = () => {
                     <div className="container-mobile">
                         <main>
                             <section className="cards-mobile">
-                                <Card typeClass="-mobile sm" title={language === "spanish" ? Data.spa.CARD_1 : Data.eng.CARD_1} icon={Data.icon.CARD_1} />
-                                <Card typeClass="-mobile sm" title={language === "spanish" ? Data.spa.CARD_2 : Data.eng.CARD_2} icon={Data.icon.CARD_2} />
-                                <Card typeClass="-mobile lg" title={language === "spanish" ? Data.spa.CARD_3 : Data.eng.CARD_3} icon={Data.icon.CARD_3} />
-                                <Card typeClass="-mobile sm" title={language === "spanish" ? Data.spa.CARD_4 : Data.eng.CARD_4} icon={Data.icon.CARD_4} />
-                                <Card typeClass="-mobile sm" title={language === "spanish" ? Data.spa.CARD_5 : Data.eng.CARD_5} icon={Data.icon.CARD_5} />
-                                <Card typeClass="-mobile lg" title={language === "spanish" ? Data.spa.CARD_6 : Data.eng.CARD_6} icon={Data.icon.CARD_6} />
+                                <Card id={1} handleShowModal={handleShowModal} typeClass="-mobile sm" title={language === "spanish" ? Data.spa.CARD_1 : Data.eng.CARD_1} icon={Data.icon.CARD_1} />
+                                <Card id={2} handleShowModal={handleShowModal} typeClass="-mobile sm" title={language === "spanish" ? Data.spa.CARD_2 : Data.eng.CARD_2} icon={Data.icon.CARD_2} />
+                                <Card id={3} handleShowModal={handleShowModal} typeClass="-mobile lg" title={language === "spanish" ? Data.spa.CARD_3 : Data.eng.CARD_3} icon={Data.icon.CARD_3} />
+                                <Card id={4} handleShowModal={handleShowModal} typeClass="-mobile sm" title={language === "spanish" ? Data.spa.CARD_4 : Data.eng.CARD_4} icon={Data.icon.CARD_4} />
+                                <Card id={5} handleShowModal={handleShowModal} typeClass="-mobile sm" title={language === "spanish" ? Data.spa.CARD_5 : Data.eng.CARD_5} icon={Data.icon.CARD_5} />
+                                <Card id={6} handleShowModal={handleShowModal} typeClass="-mobile lg" title={language === "spanish" ? Data.spa.CARD_6 : Data.eng.CARD_6} icon={Data.icon.CARD_6} />
                             </section>
                         </main>
                     </div>
                 </>
             }
-            <Modal />
+            <Modal 
+                showModal={showModal}
+                handleShowModal={handleShowModal}
+                language={language}
+                cardSelected={cardSelected}
+            />
         </>
     )
 }

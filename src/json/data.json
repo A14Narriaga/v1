@@ -7,7 +7,12 @@
         "CARD_3": "Herramientas y Tecnologías",
         "CARD_4": "Proyectos",
         "CARD_5": "Experiencia",
-        "CARD_6": "Información de contacto"
+        "CARD_6": "Información de contacto",
+        "projects": {
+            "title": "hola",
+            "img": "https://picsum.photos/seed/picsum/300/200",
+            "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum sunt asperiores reiciendis consectetur, doloribus, vel dignissimos dolores officiis placeat debitis hic eum doloremque saepe repellat nemo necessitatibus."
+        }
     },
     "eng": {
         "HEADER_INFO": "Computer Systems Engineering Student",
