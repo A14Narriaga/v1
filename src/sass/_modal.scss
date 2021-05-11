@@ -47,7 +47,7 @@
       overflow-y: scroll;
       height: 79%;
       padding: 0rem 1rem;
-
+      //////////////////////////////////////////////////////////
       .contact-btn {
         background-color: $border-hover-color;
         border: $tools-color;
@@ -76,6 +76,49 @@
           color: $primary-color-0;
         }
       }
+      //////////////////////////////////////////////////////////
+      .tool {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $secondary-color-2;
+        i {
+          font-size: 3.5rem;
+          margin-right: 1rem;
+        }
+        .tool-content {
+          width: 100%;
+          .tool-progress-bar {
+            position: relative;
+            height: 1.6em;
+            border-radius: 1.5em;
+            background-color: $primary-color-0;
+            border: solid 2px $secondary-color-2;
+            color: whitesmoke;
+            margin: 0.2rem 0rem;
+            &::before {
+              content: attr(data-label);
+              display: flex;
+              align-items: center;
+              position: absolute;
+              left: 0.1em;
+              top: 0.1em;
+              bottom: 0.1em;
+              width: calc(var(--start, 0) * 1%);
+              min-width: 0.6rem;
+              max-width: calc((var(--end, 100) * 1%) - 1em);
+              background-color: $primary-color-1;
+              font-size: 0.75rem;
+              padding: 0.4em;
+              border-radius: 99rem;
+            }
+          }
+          .tool-name {
+            font-weight: bold;
+          }
+        }
+      }
+      //////////////////////////////////////////////////////////
     }
     .line-modal {
       padding-bottom: 2rem;
