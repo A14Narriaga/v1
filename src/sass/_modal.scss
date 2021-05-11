@@ -46,30 +46,34 @@
       gap: 1.5rem;
       overflow-y: scroll;
       height: 79%;
-      font-weight: bold;
       padding: 0rem 1rem;
 
       .contact-btn {
         background-color: $border-hover-color;
         border: $tools-color;
+        text-decoration: none;
+        color: black;
         border-radius: 0.5rem;
         display: flex;
         justify-content: center;
         align-items: center;
         i {
-          font-size: 1.5rem;
+          font-size: 1.9rem;
           margin-right: 1rem;
         }
         .contact-btnTitle {
-          font-weight: bold;
           text-align: start;
           p {
-            font-size: 0.9rem;
+            font-weight: bold;
+            font-size: 1rem;
           }
           span {
+            font-size: 0.9rem;
             font-style: italic;
-            font-size: 0.7rem;
           }
+        }
+        &:hover {
+          color: $primary-color-0;
         }
       }
     }

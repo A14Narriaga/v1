@@ -58,48 +58,41 @@ const Modal = ({ showModal, handleShowModal, language, cardSelected }:
         case 5: container = <h1>5</h1>; break;
         case 6: container =
             <>
-                <button className="contact-btn">
-                    <i className={Data.icon.TELEGRAM}></i>
-                    <div className="contact-btnTitle">
-                        <p>Telegram</p>
-                        <p></p>
-                    </div>
-                </button>
-                <button className="contact-btn">
+                <a href={Data.link.WHATSAPP} className="contact-btn">
                     <i className={Data.icon.WHATS}></i>
                     <div className="contact-btnTitle">
                         <p>WhatsApp</p>
-                        <span></span>
+                        <span>5585175413</span>
                     </div>
-                </button>
-                <button className="contact-btn">
+                </a>
+                <a href={Data.link.MAIL} className="contact-btn">
                     <i className={Data.icon.MAIL}></i>
                     <div className="contact-btnTitle">
                         <p>Gmail</p>
                         <span>A14Narriaga@gmail.com</span>
                     </div>
-                </button>
-                <button className="contact-btn">
+                </a>
+                <a href={Data.link.TWITTER} className="contact-btn">
                     <i className={Data.icon.TW}></i>
                     <div className="contact-btnTitle">
                         <p>Twitter</p>
                         <span>@A14Narriaga</span>
                     </div>
-                </button>
-                <button className="contact-btn">
+                </a>
+                <a href={Data.link.GITHUB} className="contact-btn">
                     <i className={Data.icon.GITHUB}></i>
                     <div className="contact-btnTitle">
                         <p>GitHub</p>
                         <span>A14Narriaga</span>
                     </div>
-                </button>
-                <button className="contact-btn">
+                </a>
+                <a href={Data.link.LINKEDIN} className="contact-btn">
                     <i className={Data.icon.IN}></i>
                     <div className="contact-btnTitle">
                         <p>LinkedIn</p>
-                        <span></span>
+                        <span>Alan Arriaga</span>
                     </div>
-                </button>
+                </a>
             </>
             break;
     }
