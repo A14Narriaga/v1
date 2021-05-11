@@ -1,6 +1,8 @@
 import CardProject from "./CardProject"
+import Tool from "./Tool"
 import Data from "../json/data.json"
 import { useEffect, useState } from "react";
+import CardEducation from "./CardEducation";
 
 const Modal = ({ showModal, handleShowModal, language, cardSelected }:
     { showModal: string, handleShowModal: any, language: string, cardSelected: number }) => {
@@ -10,10 +12,10 @@ const Modal = ({ showModal, handleShowModal, language, cardSelected }:
     const resetProgres = () => setProgress(0)
 
     useEffect(() => {
-        if(cardSelected === 3) {
-            if(progress<100) {
+        if (cardSelected === 3) {
+            if (progress < 100) {
                 setTimeout(() => {
-                    setProgress(progress+1)
+                    setProgress(progress + 1)
                 }, 30);
             }
         }
@@ -32,60 +34,71 @@ const Modal = ({ showModal, handleShowModal, language, cardSelected }:
     var container;
     switch (cardSelected) {
         case 1: container = <h1>1</h1>; break;
-        case 2: container = <h1>2</h1>; break;
-        case 3: container = 
-        <>
-            <section className="tool">
-                <i className={Data.icon.REACT}></i>
-                <div className="tool-content">
-                    <div className="tool-progress-bar" style={{ "--start": progress, "--end": 50} as React.CSSProperties} data-label="Intermediate"></div>
-                    <p className="tool-name">React</p>
-                </div>
-            </section>
-            <section className="tool">
-                <i className={Data.icon.HTML}></i>
-                <div className="tool-content">
-                    <div className="tool-progress-bar" style={{ "--start": progress, "--end": 100} as React.CSSProperties} data-label="Advanced"></div>
-                    <p className="tool-name">HTML5</p>
-                </div>
-            </section>
-            <section className="tool">
-                <i className={Data.icon.CSS}></i>
-                <div className="tool-content">
-                    <div className="tool-progress-bar" style={{ "--start": progress, "--end": 100} as React.CSSProperties} data-label="Advanced"></div>
-                    <p className="tool-name">CSS3</p>
-                </div>
-            </section>
-            <section className="tool">
-                <i className={Data.icon.SASS}></i>
-                <div className="tool-content">
-                    <div className="tool-progress-bar" style={{ "--start": progress, "--end": 50} as React.CSSProperties} data-label="Intermediate"></div>
-                    <p className="tool-name">Sass</p>
-                </div>
-            </section>
-            <section className="tool">
-                <i className={Data.icon.BOOTSTRAP}></i>
-                <div className="tool-content">
-                    <div className="tool-progress-bar" style={{ "--start": progress, "--end": 100} as React.CSSProperties} data-label="Advanced"></div>
-                    <p className="tool-name">Bootstrap</p>
-                </div>
-            </section>
-            <section className="tool">
-                <i className={Data.icon.JS}></i>
-                <div className="tool-content">
-                    <div className="tool-progress-bar" style={{ "--start": progress, "--end": 100} as React.CSSProperties} data-label="Advanced"></div>
-                    <p className="tool-name">Javascript</p>
-                </div>
-            </section>
-            <section className="tool">
-                <i className={Data.icon.PHP}></i>
-                <div className="tool-content">
-                    <div className="tool-progress-bar" style={{ "--start": progress, "--end": 50} as React.CSSProperties} data-label="Intermediate"></div>
-                    <p className="tool-name">php</p>
-                </div>
-            </section>
-        </>
-        break;
+        case 2: container =
+            <>
+                <CardEducation
+                    school={"ESCOM - IPN"}
+                    content={"Ingeniería en Sistemas Computacionales"}
+                    period={"Ene 2017 - Actualidad"}
+                    img={"ESCOM.png"} />
+                <CardEducation
+                    school={"UPIICSA - IPN"}
+                    content={"Ingles (Nivel B2)"}
+                    period={"Mar 2018 - Ene 2020"}
+                    img={"UPIICSA.jpg"} />
+                <CardEducation
+                    school={"Udemy"}
+                    content={"Courses"}
+                    period={""}
+                    img={"UDEMY.png"} />
+            </>
+            break;
+        case 3: container =
+            <>
+                <Tool
+                    icon={Data.icon.REACT}
+                    progress={progress}
+                    end={70}
+                    level={"Intermediate"}
+                    name={"React"} />
+                <Tool
+                    icon={Data.icon.HTML}
+                    progress={progress}
+                    end={100}
+                    level={"Advanced"}
+                    name={"HTML5"} />
+                <Tool
+                    icon={Data.icon.CSS}
+                    progress={progress}
+                    end={100}
+                    level={"Advanced"}
+                    name={"CSS3"} />
+                <Tool
+                    icon={Data.icon.SASS}
+                    progress={progress}
+                    end={70}
+                    level={"Intermediate"}
+                    name={"Sass"} />
+                <Tool
+                    icon={Data.icon.BOOTSTRAP}
+                    progress={progress}
+                    end={100}
+                    level={"Advanced"}
+                    name={"Bootstrap"} />
+                <Tool
+                    icon={Data.icon.JS}
+                    progress={progress}
+                    end={70}
+                    level={"Intermediate"}
+                    name={"Javascript"} />
+                <Tool
+                    icon={Data.icon.PHP}
+                    progress={progress}
+                    end={34}
+                    level={"Basic"}
+                    name={"php"} />
+            </>
+            break;
         case 4: container =
             <>
                 <CardProject
