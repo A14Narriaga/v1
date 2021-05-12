@@ -1,0 +1,23 @@
+@mixin cardEducation {
+    .card-edu {
+        background-size: cover;
+        background-position: center;
+        border-radius: 1rem;
+        text-align: center;
+        color: whitesmoke;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .edu-school {
+          font-weight: bold;
+          font-size: 1.4rem;
+        }
+        .edu-content {
+          padding: 1rem;
+          font-size: 1.1rem;
+        }
+        .edu-period {
+          font-style: italic;
+        }
+      }
+}

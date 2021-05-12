@@ -33,7 +33,28 @@ const Modal = ({ showModal, handleShowModal, language, cardSelected }:
 
     var container;
     switch (cardSelected) {
-        case 1: container = <h1>1</h1>; break;
+        case 1: container =
+            <>
+                <section className="about-container">
+                    <p className="about-paragraph">¡Hola!,</p>
+                    <p className="about-paragraph">Soy Arriaga Martinez Alan Eduardo, estudiante de Noveno Semestre de la Escuela Superior de Cómputo del Instituto Politécnico Nacional.</p>
+                    <p className="about-paragraph">Me apasiona el desarrollo web tanto de back-end como de front-end, asi como el desarrollo móvil, la algoritmia y las finanzas personales.</p>
+                    <p>Aptitudes:</p>
+                    <ul className="qualities">
+                        <li>Creatividad</li>
+                        <li>Trabajo en equipo</li>
+                        <li>Responsabilidad</li>
+                        <li>Organización</li>
+                    </ul>
+                    <p>Hobbies:</p>
+                    <div className="hobbies">
+                        <i className="fas fa-chalkboard-teacher"></i>
+                        <i className="fas fa-book"></i>
+                        <i className="fas fa-dumbbell"></i>
+                    </div>
+                </section>
+            </>;
+            break;
         case 2: container =
             <>
                 <CardEducation
@@ -46,11 +67,6 @@ const Modal = ({ showModal, handleShowModal, language, cardSelected }:
                     content={"Ingles (Nivel B2)"}
                     period={"Mar 2018 - Ene 2020"}
                     img={"UPIICSA.jpg"} />
-                <CardEducation
-                    school={"Udemy"}
-                    content={"Courses"}
-                    period={""}
-                    img={"UDEMY.png"} />
             </>
             break;
         case 3: container =
@@ -135,7 +151,11 @@ const Modal = ({ showModal, handleShowModal, language, cardSelected }:
                 />
             </>
             break;
-        case 5: container = <h1>5</h1>; break;
+        case 5: container =
+            <>
+                <p className="experience-text">Actualmente no cuento con experiencia laboral pero en la sección de proyectos se pueden encontrar aquellos que he desarrollado en mis tiempos libres para probar mis habilidades.</p>
+            </>
+            break;
         case 6: container =
             <>
                 <a href={Data.link.WHATSAPP} className="contact-btn">
@@ -180,9 +200,6 @@ const Modal = ({ showModal, handleShowModal, language, cardSelected }:
     return (
         <section className={`modal ${showModal}`}>
             <div className="header-modal">
-                <div onClick={handleShowModal} className="actions-modal">
-                    <i onClick={resetProgres} className="fas fa-times"></i>
-                </div>
                 <div className="title-modal">
                     <p>{title}</p>
                 </div>
@@ -191,6 +208,10 @@ const Modal = ({ showModal, handleShowModal, language, cardSelected }:
                 {container}
             </div>
             <div className="line-modal"></div>
+            <div onClick={handleShowModal} className="actions-modal">
+                <i onClick={resetProgres} className="fas fa-arrow-circle-left"></i>
+                <p onClick={resetProgres}>Regresar</p>
+            </div>
         </section>
     )
 }

@@ -33,7 +33,7 @@ const App = () => {
 
     const handleShowModal = (card: number) => {
         setCardSelected(card)
-        //if(movileSize) document.body.style.position = showModal === "hidde" ? "fixed" : "";
+        if(movileSize) document.body.style.position = showModal === "hidde" ? "fixed" : "";
         setShowModal(modal => (modal === "hidde" ? "" : "hidde"));
     }
 
@@ -81,7 +81,7 @@ const App = () => {
                         handleThemeChange={handleThemeChange}
                         handlelanguageChange={handlelanguageChange}
                     />
-                    <div className="container-mobile">
+                    <div className="container-mobile" >
                         <main>
                             <section className="cards-mobile">
                                 <Card id={1} handleShowModal={handleShowModal} typeClass="-mobile sm" title={language === "spanish" ? Data.spa.CARD_1 : Data.eng.CARD_1} icon={Data.icon.CARD_1} />

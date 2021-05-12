@@ -1,7 +1,5 @@
 @mixin modal {
-
   .modal {
-
     max-width: 850px;
     width: 100%;
     height: 100%;
@@ -9,38 +7,26 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    padding: 2rem;
-    background-color: $modal-color;
+    padding: 2.5rem 2rem;
+    background-color: $secondary-color-1;
     backdrop-filter: blur(4rem);
     color: $primary-color-0;
-    
     .header-modal {
       padding-bottom: 1rem;
       margin-bottom: 2rem;
       border-bottom: 2px solid $primary-color-0;
       box-shadow: 0px 1.3px 0px rgba(0, 0, 0, 0.26);
-      
-      .actions-modal {
-        display: flex;
-        justify-content: flex-end;
-        font-size: 1.5rem;
-        margin-bottom: 0.5rem;
-      }
-      
       .title-modal {
         display: flex;
         justify-content: center;
-        
         p {
           font-weight: 700;
           font-style: italic;
-          font-size: 1.7rem;
+          font-size: 1.6rem;
         }
       }
     }
-    
     .container-modal {
-      //background-color: rgba(102, 51, 153, 0.432);
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 1.5rem;
@@ -50,7 +36,6 @@
       //////////////////////////////////////////////////////////
       .contact-btn {
         background-color: $border-hover-color;
-        border: $tools-color;
         text-decoration: none;
         color: black;
         border-radius: 0.5rem;
@@ -77,76 +62,51 @@
         }
       }
       //////////////////////////////////////////////////////////
-      .tool {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+      .experience-text {
+        padding: 0rem 1.5rem;
         color: $secondary-color-2;
-        i {
-          font-size: 3.5rem;
-          margin-right: 1rem;
+        font-style: italic;
+      }
+      //////////////////////////////////////////////////////////
+      .about-container {
+        padding: 0rem 1.5rem;
+        color: $secondary-color-2;
+        font-style: italic;
+        .about-paragraph {
+          margin-bottom: 1rem;
         }
-        .tool-content {
-          width: 100%;
-          .tool-progress-bar {
-            position: relative;
-            height: 1.6em;
-            border-radius: 1.5em;
-            background-color: $primary-color-0;
-            border: solid 2px $secondary-color-2;
-            color: whitesmoke;
-            margin: 0.2rem 0rem;
-            &::before {
-              content: attr(data-label);
-              display: flex;
-              align-items: center;
-              position: absolute;
-              left: 0.1em;
-              top: 0.1em;
-              bottom: 0.1em;
-              width: calc(var(--start, 0) * 1%);
-              min-width: 0.6rem;
-              max-width: calc((var(--end, 100) * 1%) - 1em);
-              background-color: $primary-color-1;
-              font-size: 0.75rem;
-              padding: 0.4em;
-              border-radius: 99rem;
-            }
-          }
-          .tool-name {
-            font-weight: bold;
+        .qualities {
+          margin-left: 2rem;
+          margin-bottom: 1rem;
+        }
+        .hobbies {
+          margin-top: 0.5rem;
+          font-size: 1.5rem;
+          i {
+            margin-right: 1rem;
           }
         }
       }
-      //////////////////////////////////////////////////////////
-      .card-edu {
-        background-size: cover;
-        background-position: center;
-        border: 2px solid whitesmoke;
-        border-radius: 1rem;
-        text-align: center;
-        color: whitesmoke;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        .edu-school {
-          font-weight: bold;
-          font-size: 1.4rem;
-        }
-        .edu-content {
-          padding: 1rem;
-          font-size: 1.1rem;
-        }
-        .edu-period {
-          font-style: italic;
-        }
-      }
-      //////////////////////////////////////////////////////////
     }
     .line-modal {
       padding-bottom: 2rem;
       border-bottom: 2px solid $primary-color-0;
       box-shadow: 0px 1.3px 0px rgba(0, 0, 0, 0.26);
+      margin-bottom: 1rem;
+    }
+    .actions-modal {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      font-size: 1.6rem;
+      cursor: pointer;
+      font-style: italic;
+      i {
+        margin-right: 0.5rem;
+      }
+      p {
+        font-size: 1.3rem;
+      }
     }
   }
 }

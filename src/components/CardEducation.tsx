@@ -3,7 +3,7 @@ const CardEducation = ({school, content, period, img}:
     {school: string, content: string, period: string, img: string}) => {
 
     const style = {
-        backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url(./img/${img})`,
+        backgroundImage: `linear-gradient(to bottom, rgba(26, 24, 24, 0.850), rgba(26, 24, 24, 0.850)), url(./img/${img})`,
     }
 
     return (

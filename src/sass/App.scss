@@ -6,7 +6,9 @@
 @import "./container";
 @import "./containerMobile";
 @import "./modal";
+@import "./tool";
 @import "./cardProject";
+@import "./cardEducation";
 
 @mixin app($theme, $languaje) {
   @include setCurrentTheme($theme, $languaje);
@@ -19,7 +21,9 @@
   @include container;
   @include containerMobile;
   @include modal;
+  @include tool;
   @include cardProject;
+  @include cardEducation;
 }
 
 * {
