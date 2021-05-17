@@ -75,43 +75,43 @@ const Modal = ({ showModal, handleShowModal, language, cardSelected }:
                     icon={Data.icon.REACT}
                     progress={progress}
                     end={70}
-                    level={"Intermediate"}
+                    level={language === "spanish" ? Data.spa.INTER_LABEL : Data.eng.INTER_LABEL}
                     name={"React"} />
                 <Tool
                     icon={Data.icon.HTML}
                     progress={progress}
                     end={100}
-                    level={"Advanced"}
+                    level={language === "spanish" ? Data.spa.ADVANCE_LABEL : Data.eng.ADVANCE_LABEL}
                     name={"HTML5"} />
                 <Tool
                     icon={Data.icon.CSS}
                     progress={progress}
                     end={100}
-                    level={"Advanced"}
+                    level={language === "spanish" ? Data.spa.ADVANCE_LABEL : Data.eng.ADVANCE_LABEL}
                     name={"CSS3"} />
                 <Tool
                     icon={Data.icon.SASS}
                     progress={progress}
                     end={70}
-                    level={"Intermediate"}
+                    level={language === "spanish" ? Data.spa.INTER_LABEL : Data.eng.INTER_LABEL}
                     name={"Sass"} />
                 <Tool
                     icon={Data.icon.BOOTSTRAP}
                     progress={progress}
                     end={100}
-                    level={"Advanced"}
+                    level={language === "spanish" ? Data.spa.ADVANCE_LABEL : Data.eng.ADVANCE_LABEL}
                     name={"Bootstrap"} />
                 <Tool
                     icon={Data.icon.JS}
                     progress={progress}
                     end={70}
-                    level={"Intermediate"}
+                    level={language === "spanish" ? Data.spa.INTER_LABEL : Data.eng.INTER_LABEL}
                     name={"Javascript"} />
                 <Tool
                     icon={Data.icon.PHP}
                     progress={progress}
                     end={34}
-                    level={"Basic"}
+                    level={language === "spanish" ? Data.spa.BASIC_LABEL : Data.eng.BASIC_LABEL}
                     name={"php"} />
             </>
             break;
@@ -210,7 +210,7 @@ const Modal = ({ showModal, handleShowModal, language, cardSelected }:
             <div className="line-modal"></div>
             <div onClick={handleShowModal} className="actions-modal">
                 <i onClick={resetProgres} className="fas fa-arrow-circle-left"></i>
-                <p onClick={resetProgres}>Regresar</p>
+                <p onClick={resetProgres}>{language === "spanish" ? Data.spa.BACK_BTN : Data.eng.BACK_BTN}</p>
             </div>
         </section>
     )

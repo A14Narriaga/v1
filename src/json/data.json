@@ -8,6 +8,10 @@
         "CARD_4": "Proyectos",
         "CARD_5": "Experiencia",
         "CARD_6": "Información de contacto",
+        "BACK_BTN": "Regresar",
+        "ADVANCE_LABEL": "Avanzado",
+        "INTER_LABEL": "Intermedio",
+        "BASIC_LABEL": "Basico",
         "projects": {
             "1": {
                 "title": "Sistema de posgrado",
@@ -52,6 +56,10 @@
         "CARD_4": "Projects",
         "CARD_5": "Experience",
         "CARD_6": "Contact information",
+        "BACK_BTN": "Back",
+        "ADVANCE_LABEL": "Advance",
+        "INTER_LABEL": "Intermediate",
+        "BASIC_LABEL": "Basic",
         "projects": {
             "1": {
                 "title": "Postgraduate system",

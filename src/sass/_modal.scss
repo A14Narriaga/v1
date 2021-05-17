@@ -36,6 +36,7 @@
       //////////////////////////////////////////////////////////
       .contact-btn {
         background-color: $border-hover-color;
+        height: 5rem;
         text-decoration: none;
         color: black;
         border-radius: 0.5rem;
@@ -58,7 +59,8 @@
           }
         }
         &:hover {
-          color: $primary-color-0;
+          box-shadow: 4px 4px 2px $primary-color-0;
+          color: $primary-color-1;
         }
       }
       //////////////////////////////////////////////////////////

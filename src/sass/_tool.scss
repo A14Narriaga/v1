@@ -14,9 +14,10 @@
         position: relative;
         height: 1.6em;
         border-radius: 1.5em;
-        background-color: $primary-color-0;
+        background-color: $secondary-color-1;
         border: solid 2px $secondary-color-2;
-        color: whitesmoke;
+        color: white;
+        font-style: italic;
         margin: 0.2rem 0rem;
         &::before {
           content: attr(data-label);
@@ -29,7 +30,7 @@
           width: calc(var(--start, 0) * 1%);
           min-width: 0.6rem;
           max-width: calc((var(--end, 100) * 1%) - 1em);
-          background-color: $primary-color-1;
+          background-color: $primary-color-0;
           font-size: 0.75rem;
           padding: 0.4em;
           border-radius: 99rem;

@@ -46,6 +46,7 @@
 
                 &:hover {
                   color: $secondary-color-2;
+                  cursor: pointer;
                 }
               }
             }
@@ -82,6 +83,7 @@
           &:hover {
             color: $secondary-color-2;
             border: 2px solid $border-hover-color;
+            cursor: pointer;
           }
         }
       }
