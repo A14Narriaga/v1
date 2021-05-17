@@ -1,6 +1,6 @@
 const HeaderMovile = (
-    { headerInfo, headerBtn, themeIcon, languageIcon, handleThemeChange, handlelanguageChange }:
-        { headerInfo: string, headerBtn: string, themeIcon: string, languageIcon: string, handleThemeChange: any, handlelanguageChange: any }
+    { headerInfo, headerBtn, themeIcon, languageIcon, handleThemeChange, handlelanguageChange, resume }:
+        { headerInfo: string, headerBtn: string, themeIcon: string, languageIcon: string, handleThemeChange: any, handlelanguageChange: any, resume: string }
 ) => {
     return (
         <div className="header-container-movile">
@@ -24,7 +24,7 @@ const HeaderMovile = (
                     <p>{headerInfo}</p>
                 </div>
                 <section className="resume">
-                    <a href="/">
+                    <a href={`./files/${resume}`} download>
                         <i className="fas fa-download"></i>
                         <p>{headerBtn}</p>
                     </a>

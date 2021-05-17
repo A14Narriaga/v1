@@ -57,7 +57,8 @@ const App = () => {
                         themeIcon={theme === "dark" ? Data.icon.MOON : Data.icon.SUN}
                         languageIcon={language === "spanish" ? Data.icon.SPA : Data.icon.ENG}
                         handleThemeChange={handleThemeChange}
-                        handlelanguageChange={handlelanguageChange} />
+                        handlelanguageChange={handlelanguageChange}
+                        resume={language === "spanish" ? Data.spa.RESUME : Data.eng.RESUME} />
                     <div className="container">
                         <main>
                             <section className="cards">
@@ -80,7 +81,7 @@ const App = () => {
                         languageIcon={language === "spanish" ? Data.icon.SPA : Data.icon.ENG}
                         handleThemeChange={handleThemeChange}
                         handlelanguageChange={handlelanguageChange}
-                    />
+                        resume={language === "spanish" ? Data.spa.RESUME : Data.eng.RESUME} />
                     <div className="container-mobile" >
                         <main>
                             <section className="cards-mobile">

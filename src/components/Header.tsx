@@ -1,8 +1,8 @@
 import React from 'react'
 
 const Header = (
-    { headerInfo, headerBtn, themeIcon, languageIcon, handleThemeChange, handlelanguageChange }:
-        { headerInfo: string, headerBtn: string, themeIcon: string, languageIcon: string, handleThemeChange: any, handlelanguageChange: any }
+    { headerInfo, headerBtn, themeIcon, languageIcon, handleThemeChange, handlelanguageChange, resume }:
+        { headerInfo: string, headerBtn: string, themeIcon: string, languageIcon: string, handleThemeChange: any, handlelanguageChange: any, resume: string }
 ) => {
     return (
         <div className="header-container">
@@ -25,7 +25,7 @@ const Header = (
                     </section>
                 </section>
                 <section className="resume">
-                    <a href="/">
+                    <a href={`./files/${resume}`} download>
                         <i className="fas fa-download"></i>
                         <p>{headerBtn}</p>
                     </a>

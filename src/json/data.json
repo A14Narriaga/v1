@@ -12,6 +12,7 @@
         "ADVANCE_LABEL": "Avanzado",
         "INTER_LABEL": "Intermedio",
         "BASIC_LABEL": "Basico",
+        "RESUME": "CV.pdf",
         "EDUCATION": {
             "1": {
                 "SCHOOL": "ESCOM - IPN",
@@ -74,6 +75,7 @@
         "ADVANCE_LABEL": "Advance",
         "INTER_LABEL": "Intermediate",
         "BASIC_LABEL": "Basic",
+        "RESUME": "Resume.pdf",
         "EDUCATION": {
             "1": {
                 "COURSE": "Computer Systems Engineering",
