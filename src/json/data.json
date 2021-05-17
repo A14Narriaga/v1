@@ -12,6 +12,20 @@
         "ADVANCE_LABEL": "Avanzado",
         "INTER_LABEL": "Intermedio",
         "BASIC_LABEL": "Basico",
+        "EDUCATION": {
+            "1": {
+                "SCHOOL": "ESCOM - IPN",
+                "COURSE": "Ingeniería en Sistemas Computacionales",
+                "PERIOD": "Ene 2017 - Actualidad",
+                "IMG": "ESCOM.png"
+            },
+            "2": {
+                "SCHOOL": "UPIICSA - IPN",
+                "COURSE": "Ingles (Nivel B2)",
+                "PERIOD": "Mar 2018 - Ene 2020",
+                "IMG": "UPIICSA.jpg"
+            }
+        },
         "projects": {
             "1": {
                 "title": "Sistema de posgrado",
@@ -60,6 +74,16 @@
         "ADVANCE_LABEL": "Advance",
         "INTER_LABEL": "Intermediate",
         "BASIC_LABEL": "Basic",
+        "EDUCATION": {
+            "1": {
+                "COURSE": "Computer Systems Engineering",
+                "PERIOD": "Jun 2017 - Present"
+            },
+            "2": {
+                "COURSE": "English (Level B2)",
+                "PERIOD": "Mar 2018 - Jun 2020"
+            }
+        },
         "projects": {
             "1": {
                 "title": "Postgraduate system",

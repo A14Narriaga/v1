@@ -33,13 +33,13 @@ $dark: (
 @mixin setCurrentTheme($theme, $languaje) {
   $border-color: getColor("border", $theme) !global;
   @if $languaje == "spanish" {
-    $primary-color-0: #145f88 !global;
-    $primary-color-1: #073956 !global;
+    $primary-color-0: #2283b8 !global;
+    $primary-color-1: #0a4f77 !global;
   } @else {
-    $primary-color-0: #148088 !global;
-    $primary-color-1: #074b56 !global;
+    $primary-color-0: #17a3ad !global;
+    $primary-color-1: #0b7281 !global;
     @if $theme == "dark" {
-      $border-color: #148088 !global;
+      $border-color: #17a3ad !global;
     }
   }
   $secondary-color-0: getColor("secondary0", $theme) !global;

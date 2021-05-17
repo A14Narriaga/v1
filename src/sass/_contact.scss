@@ -1,0 +1,42 @@
+@mixin contact {
+  .container-modal-contact {
+    height: 79%;
+    overflow-y: scroll;
+    .wrapper-contact {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 1.5rem;
+      height: auto;
+      padding: 0rem 1rem;
+      .contact-btn {
+        background-color: $border-hover-color;
+        height: 4.5rem;
+        text-decoration: none;
+        color: black;
+        border-radius: 0.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        i {
+          font-size: 1.9rem;
+          margin-right: 1rem;
+        }
+        .contact-btnTitle {
+          text-align: start;
+          p {
+            font-weight: bold;
+            font-size: 1rem;
+          }
+          span {
+            font-size: 0.9rem;
+            font-style: italic;
+          }
+        }
+        &:hover {
+          box-shadow: 4px 4px 2px $primary-color-0;
+          color: $primary-color-1;
+        }
+      }
+    }
+  }
+}

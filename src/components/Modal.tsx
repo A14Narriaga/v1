@@ -34,7 +34,7 @@ const Modal = ({ showModal, handleShowModal, language, cardSelected }:
     var container;
     switch (cardSelected) {
         case 1: container =
-            <>
+            <div className="container-modal">
                 <section className="about-container">
                     <p className="about-paragraph">¡Hola!,</p>
                     <p className="about-paragraph">Soy Arriaga Martinez Alan Eduardo, estudiante de Noveno Semestre de la Escuela Superior de Cómputo del Instituto Politécnico Nacional.</p>
@@ -53,24 +53,24 @@ const Modal = ({ showModal, handleShowModal, language, cardSelected }:
                         <i className="fas fa-dumbbell"></i>
                     </div>
                 </section>
-            </>;
+            </div>;
             break;
         case 2: container =
-            <>
+            <div className="container-modal">
                 <CardEducation
-                    school={"ESCOM - IPN"}
-                    content={"Ingeniería en Sistemas Computacionales"}
-                    period={"Ene 2017 - Actualidad"}
-                    img={"ESCOM.png"} />
+                    school={Data.spa.EDUCATION[1].SCHOOL}
+                    content={language === "spanish" ? Data.spa.EDUCATION[1].COURSE : Data.eng.EDUCATION[1].COURSE}
+                    period={language === "spanish" ? Data.spa.EDUCATION[1].PERIOD : Data.eng.EDUCATION[1].PERIOD}
+                    img={Data.spa.EDUCATION[1].IMG} />
                 <CardEducation
-                    school={"UPIICSA - IPN"}
-                    content={"Ingles (Nivel B2)"}
-                    period={"Mar 2018 - Ene 2020"}
-                    img={"UPIICSA.jpg"} />
-            </>
+                    school={Data.spa.EDUCATION[2].SCHOOL}
+                    content={language === "spanish" ? Data.spa.EDUCATION[2].COURSE : Data.eng.EDUCATION[2].COURSE}
+                    period={language === "spanish" ? Data.spa.EDUCATION[2].PERIOD : Data.eng.EDUCATION[2].PERIOD}
+                    img={Data.spa.EDUCATION[2].IMG} />
+            </div>
             break;
         case 3: container =
-            <>
+            <div className="container-modal">
                 <Tool
                     icon={Data.icon.REACT}
                     progress={progress}
@@ -113,10 +113,10 @@ const Modal = ({ showModal, handleShowModal, language, cardSelected }:
                     end={34}
                     level={language === "spanish" ? Data.spa.BASIC_LABEL : Data.eng.BASIC_LABEL}
                     name={"php"} />
-            </>
+            </div>
             break;
         case 4: container =
-            <>
+            <div className="container-modal">
                 <CardProject
                     title={language === "spanish" ? Data.spa.projects[1].title : Data.eng.projects[1].title}
                     link={Data.spa.projects[1].link}
@@ -149,51 +149,53 @@ const Modal = ({ showModal, handleShowModal, language, cardSelected }:
                     desc={language === "spanish" ? Data.spa.projects[4].desc : Data.eng.projects[4].desc}
                     tools={Data.spa.projects[4].tools}
                 />
-            </>
+            </div>
             break;
         case 5: container =
-            <>
+            <div className="container-modal">
                 <p className="experience-text">Actualmente no cuento con experiencia laboral pero en la sección de proyectos se pueden encontrar aquellos que he desarrollado en mis tiempos libres para probar mis habilidades.</p>
-            </>
+            </div>
             break;
         case 6: container =
-            <>
-                <a href={Data.link.WHATSAPP} className="contact-btn">
-                    <i className={Data.icon.WHATS}></i>
-                    <div className="contact-btnTitle">
-                        <p>WhatsApp</p>
-                        <span>5585175413</span>
-                    </div>
-                </a>
-                <a href={Data.link.MAIL} className="contact-btn">
-                    <i className={Data.icon.MAIL}></i>
-                    <div className="contact-btnTitle">
-                        <p>Gmail</p>
-                        <span>A14Narriaga@gmail.com</span>
-                    </div>
-                </a>
-                <a href={Data.link.TWITTER} className="contact-btn">
-                    <i className={Data.icon.TW}></i>
-                    <div className="contact-btnTitle">
-                        <p>Twitter</p>
-                        <span>@A14Narriaga</span>
-                    </div>
-                </a>
-                <a href={Data.link.GITHUB} className="contact-btn">
-                    <i className={Data.icon.GITHUB}></i>
-                    <div className="contact-btnTitle">
-                        <p>GitHub</p>
-                        <span>A14Narriaga</span>
-                    </div>
-                </a>
-                <a href={Data.link.LINKEDIN} className="contact-btn">
-                    <i className={Data.icon.IN}></i>
-                    <div className="contact-btnTitle">
-                        <p>LinkedIn</p>
-                        <span>Alan Arriaga</span>
-                    </div>
-                </a>
-            </>
+            <div className="container-modal-contact">
+                <div className="wrapper-contact">
+                    <a href={Data.link.WHATSAPP} className="contact-btn">
+                        <i className={Data.icon.WHATS}></i>
+                        <div className="contact-btnTitle">
+                            <p>WhatsApp</p>
+                            <span>5585175413</span>
+                        </div>
+                    </a>
+                    <a href={Data.link.MAIL} className="contact-btn">
+                        <i className={Data.icon.MAIL}></i>
+                        <div className="contact-btnTitle">
+                            <p>Gmail</p>
+                            <span>A14Narriaga@gmail.com</span>
+                        </div>
+                    </a>
+                    <a href={Data.link.TWITTER} className="contact-btn">
+                        <i className={Data.icon.TW}></i>
+                        <div className="contact-btnTitle">
+                            <p>Twitter</p>
+                            <span>@A14Narriaga</span>
+                        </div>
+                    </a>
+                    <a href={Data.link.GITHUB} className="contact-btn">
+                        <i className={Data.icon.GITHUB}></i>
+                        <div className="contact-btnTitle">
+                            <p>GitHub</p>
+                            <span>A14Narriaga</span>
+                        </div>
+                    </a>
+                    <a href={Data.link.LINKEDIN} className="contact-btn">
+                        <i className={Data.icon.IN}></i>
+                        <div className="contact-btnTitle">
+                            <p>LinkedIn</p>
+                            <span>Alan Arriaga</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
             break;
     }
 
@@ -204,9 +206,7 @@ const Modal = ({ showModal, handleShowModal, language, cardSelected }:
                     <p>{title}</p>
                 </div>
             </div>
-            <div className="container-modal">
-                {container}
-            </div>
+            {container}
             <div className="line-modal"></div>
             <div onClick={handleShowModal} className="actions-modal">
                 <i onClick={resetProgres} className="fas fa-arrow-circle-left"></i>
