@@ -12,7 +12,7 @@ const Header = (
         else {
             setTimeout(() => {
                 setPicture(picture + 1);
-            }, 4000);
+            }, 3000);
         }
     }, [picture])
 
