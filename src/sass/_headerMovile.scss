@@ -52,17 +52,19 @@
           max-width: 8rem;
           border: 4px solid $secondary-color-1;
           border-radius: 2rem;
-          box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.26);
+          box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.37);
+          height: 8rem;
         }
       }
       .content {
         font-size: 1.1rem;
         font-weight: 600;
         font-style: italic;
-        color: rgb(189, 172, 172);
+        color: rgb(214, 214, 214);
         margin-bottom: 2rem;
         text-align: center;
         padding: 0rem 1rem;
+        text-shadow: 3px 3px 2px rgba(0, 0, 0, 0.445);
       }
       .resume {
         margin-bottom: 2rem;

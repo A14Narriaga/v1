@@ -7,7 +7,7 @@
 
     header {
       @include center-page;
-      padding: 1rem 0rem;
+      padding: 1.5rem 0rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -21,6 +21,7 @@
           max-width: 8rem;
           border-radius: 1.5rem;
           margin-right: 1.5rem;
+          height: 8rem;
         }
 
         .info {

@@ -79,6 +79,9 @@
       p {
         font-size: 1.3rem;
       }
+      &:hover {
+        color: $secondary-color-2;
+      }
     }
   }
 }

@@ -1,19 +1,15 @@
 $light: (
   secondary0: #f3f3f3,
-  secondary1: #cbcbcb,
+  secondary1: #cfcfcf,
   secondary2: #201d1d,
-  border: #f3f3f3,
   border-hover: #f3f3f3,
-  modal: #ffffff70,
   tools: #9e989836,
 );
 $dark: (
   secondary0: #201d1d,
   secondary1: #201d1d,
   secondary2: #8c8c8c,
-  border: #145f88,
   border-hover: #8c8c8c,
-  modal: #0f0e0ea2,
   tools: #ffffff36,
 );
 
@@ -31,21 +27,19 @@ $dark: (
 }
 
 @mixin setCurrentTheme($theme, $languaje) {
-  $border-color: getColor("border", $theme) !global;
   @if $languaje == "spanish" {
-    $primary-color-0: #2283b8 !global;
-    $primary-color-1: #0a4f77 !global;
-  } @else {
-    $primary-color-0: #17a3ad !global;
-    $primary-color-1: #0b7281 !global;
-    @if $theme == "dark" {
-      $border-color: #17a3ad !global;
-    }
+    $primary-color-0: if($theme == "dark", #2690c9, #1a5e83) !global;
+    $primary-color-1: if($theme == "dark", #0a4f77, #094161) !global;
+    $border-color: if($theme == "dark", #2690c9, #f3f3f3) !global;
+  } 
+  @else {
+    $primary-color-0: if($theme == "dark", #189aa3, #157f86) !global;
+    $primary-color-1: if($theme == "dark", #0f7080, #094e58) !global;
+    $border-color: if($theme == "dark", #17a3ad, #f3f3f3) !global;
   }
   $secondary-color-0: getColor("secondary0", $theme) !global;
   $secondary-color-1: getColor("secondary1", $theme) !global;
   $secondary-color-2: getColor("secondary2", $theme) !global;
   $border-hover-color: getColor("border-hover", $theme) !global;
-  $modal-color: getColor("modal", $theme) !global;
   $tools-color: getColor("tools", $theme) !global;
 }

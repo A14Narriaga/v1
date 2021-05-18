@@ -1,7 +1,21 @@
+import { useEffect, useState } from "react";
+
 const HeaderMovile = (
     { headerInfo, headerBtn, themeIcon, languageIcon, handleThemeChange, handlelanguageChange, resume }:
         { headerInfo: string, headerBtn: string, themeIcon: string, languageIcon: string, handleThemeChange: any, handlelanguageChange: any, resume: string }
 ) => {
+
+    const [picture, setPicture] = useState(0);
+
+    useEffect(() => {
+        if (picture === 4) setPicture(0);
+        else {
+            setTimeout(() => {
+                setPicture(picture + 1);
+            }, 4000);
+        }
+    }, [picture])
+
     return (
         <div className="header-container-movile">
             <div className="back"></div>
@@ -18,7 +32,7 @@ const HeaderMovile = (
                     <p><span>ALAN</span>ARRIAGA</p>
                 </div>
                 <div className="img-content">
-                    <img src="./img/profile1.jpg" alt="Alan Arriaga img" />
+                <img src={`./img/profile${picture}.jpg`} alt={`Alan Arriaga ${picture}`} />
                 </div>
                 <div className="content">
                     <p>{headerInfo}</p>
