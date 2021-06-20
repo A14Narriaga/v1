@@ -72,6 +72,18 @@ const Modal = ({ showModal, handleShowModal, language, cardSelected }:
         case 3: container =
             <div className="container-modal">
                 <Tool
+                    icon={Data.icon.XD}
+                    progress={progress}
+                    end={70}
+                    level={language === "spanish" ? Data.spa.INTER_LABEL : Data.eng.INTER_LABEL}
+                    name={"Adobe XD"} />
+                <Tool
+                    icon={Data.icon.SQL}
+                    progress={progress}
+                    end={70}
+                    level={language === "spanish" ? Data.spa.INTER_LABEL : Data.eng.INTER_LABEL}
+                    name={"SQL"} />
+                <Tool
                     icon={Data.icon.REACT}
                     progress={progress}
                     end={70}
@@ -80,14 +92,14 @@ const Modal = ({ showModal, handleShowModal, language, cardSelected }:
                 <Tool
                     icon={Data.icon.HTML}
                     progress={progress}
-                    end={100}
-                    level={language === "spanish" ? Data.spa.ADVANCE_LABEL : Data.eng.ADVANCE_LABEL}
+                    end={70}
+                    level={language === "spanish" ? Data.spa.INTER_LABEL : Data.eng.INTER_LABEL}
                     name={"HTML5"} />
                 <Tool
                     icon={Data.icon.CSS}
                     progress={progress}
-                    end={100}
-                    level={language === "spanish" ? Data.spa.ADVANCE_LABEL : Data.eng.ADVANCE_LABEL}
+                    end={70}
+                    level={language === "spanish" ? Data.spa.INTER_LABEL : Data.eng.INTER_LABEL}
                     name={"CSS3"} />
                 <Tool
                     icon={Data.icon.SASS}
@@ -96,23 +108,47 @@ const Modal = ({ showModal, handleShowModal, language, cardSelected }:
                     level={language === "spanish" ? Data.spa.INTER_LABEL : Data.eng.INTER_LABEL}
                     name={"Sass"} />
                 <Tool
-                    icon={Data.icon.BOOTSTRAP}
-                    progress={progress}
-                    end={100}
-                    level={language === "spanish" ? Data.spa.ADVANCE_LABEL : Data.eng.ADVANCE_LABEL}
-                    name={"Bootstrap"} />
-                <Tool
                     icon={Data.icon.JS}
                     progress={progress}
                     end={70}
                     level={language === "spanish" ? Data.spa.INTER_LABEL : Data.eng.INTER_LABEL}
-                    name={"Javascript"} />
+                    name={"JavaScript"} />
+                <Tool
+                    icon={Data.icon.TS}
+                    progress={progress}
+                    end={70}
+                    level={language === "spanish" ? Data.spa.INTER_LABEL : Data.eng.INTER_LABEL}
+                    name={"TypeScript"} />
+                <Tool
+                    icon={Data.icon.BOOTSTRAP}
+                    progress={progress}
+                    end={70}
+                    level={language === "spanish" ? Data.spa.INTER_LABEL : Data.eng.INTER_LABEL}
+                    name={"Bootstrap"} />
                 <Tool
                     icon={Data.icon.PHP}
                     progress={progress}
-                    end={34}
-                    level={language === "spanish" ? Data.spa.BASIC_LABEL : Data.eng.BASIC_LABEL}
-                    name={"php"} />
+                    end={70}
+                    level={language === "spanish" ? Data.spa.INTER_LABEL : Data.eng.INTER_LABEL}
+                    name={"Php"} />
+                <Tool
+                    icon={Data.icon.JAVA}
+                    progress={progress}
+                    end={70}
+                    level={language === "spanish" ? Data.spa.INTER_LABEL : Data.eng.INTER_LABEL}
+                    name={"Java"} />
+                <Tool
+                    icon={Data.icon.PYTHON}
+                    progress={progress}
+                    end={70}
+                    level={language === "spanish" ? Data.spa.INTER_LABEL : Data.eng.INTER_LABEL}
+                    name={"Python"} />
+                <Tool
+                    icon={Data.icon.LINUX}
+                    progress={progress}
+                    end={70}
+                    level={language === "spanish" ? Data.spa.INTER_LABEL : Data.eng.INTER_LABEL}
+                    name={"Linux"} />
             </div>
             break;
         case 4: container =

@@ -12,7 +12,7 @@
         "ADVANCE_LABEL": "Avanzado",
         "INTER_LABEL": "Intermedio",
         "BASIC_LABEL": "Basico",
-        "RESUME": "CV.pdf",
+        "RESUME": "CV_Arriaga_Alan.pdf",
         "EDUCATION": {
             "1": {
                 "SCHOOL": "ESCOM - IPN",
@@ -75,7 +75,7 @@
         "ADVANCE_LABEL": "Advance",
         "INTER_LABEL": "Intermediate",
         "BASIC_LABEL": "Basic",
-        "RESUME": "Resume.pdf",
+        "RESUME": "Resume_Arriaga_Alan.pdf",
         "EDUCATION": {
             "1": {
                 "COURSE": "Computer Systems Engineering",
@@ -119,19 +119,24 @@
         "LINK": "fas fa-link",
         "REACT": "fab fa-react",
         "PHP": "fab fa-php",
+        "SQL": "fas fa-database",
         "SASS": "fab fa-sass",
         "HTML": "fab fa-html5",
         "CSS": "fab fa-css3-alt",
         "JS": "fab fa-js-square",
-        "TS": "",
-        "XD": "",
+        "TS": "fas fa-file-code",
+        "XD": "fas fa-file-code",
+        "JAVA": "fab fa-java",
+        "PYTHON": "fab fa-python",
+        "C++": "fas fa-file-code",
         "BOOTSTRAP": "fab fa-bootstrap",
         "TELEGRAM": "fab fa-telegram-plane",
         "WHATS": "fab fa-whatsapp",
         "MAIL": "fas fa-envelope",
         "GITHUB": "fab fa-github",
         "TW": "fab fa-twitter",
-        "IN": "fab fa-linkedin"
+        "IN": "fab fa-linkedin",
+        "LINUX": "fab fa-linux"
     },
     "link": {
         "GITHUB": "https://github.com/A14Narriaga",

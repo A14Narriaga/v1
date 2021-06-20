@@ -37,7 +37,7 @@ const Header = (
                     </section>
                 </section>
                 <section className="resume">
-                    <a href={`./files/${resume}`} download>
+                    <a href={`./files/${resume}`} target="blank">
                         <i className="fas fa-download"></i>
                         <p>{headerBtn}</p>
                     </a>
