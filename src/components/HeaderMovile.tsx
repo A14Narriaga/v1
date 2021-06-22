@@ -8,7 +8,7 @@ const HeaderMovile = (
     const [picture, setPicture] = useState(0);
 
     useEffect(() => {
-        if (picture === 4) setPicture(0);
+        if (picture === 6) setPicture(0);
         else {
             setTimeout(() => {
                 setPicture(picture + 1);
